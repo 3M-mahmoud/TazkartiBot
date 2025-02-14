@@ -1,0 +1,8 @@
+services:
+  - name: telegram-bot
+    type: worker
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "bash start.sh"
+    region: oregon
+    plan: free
