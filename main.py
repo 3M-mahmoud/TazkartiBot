@@ -101,6 +101,10 @@ async def choose_team(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(f"تم اختيار فريقك: {team}. سيتم إرسال إشعار عند توفر التذاكر.")
 
 
+async def stop_bot(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("🚫 تم إيقاف البوت.")
+    app.stop()
+
 # 🔹 التحقق من التذاكر وإرسال إشعار مرة واحدة فقط
 async def check_tickets(context: ContextTypes.DEFAULT_TYPE):
     global sent_notifications
